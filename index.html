@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Multi Video</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Multi Video</title>
 
 <script type="text/javascript">
 var _Hasync= _Hasync|| [];
@@ -11,181 +11,146 @@ _Hasync.push(['Histats.start', '1,5023310,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
 _Hasync.push(['Histats.track_hits', '']);
 (function() {
-var hs = document.createElement('script'); 
-hs.type = 'text/javascript'; 
+var hs = document.createElement('script');
+hs.type = 'text/javascript';
 hs.async = true;
 hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
 })();
 </script>
 
+<noscript>
+<a href="/" target="_blank">
+<img src="//sstatic1.histats.com/0.gif?5023310&101" border="0">
+</a>
+</noscript>
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
-}
+body { margin:0; font-family:Arial; background:#f1f1f1; }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  background: white;
-  border-bottom: 1px solid #ddd;
+display:flex; justify-content:space-between; align-items:center;
+padding:12px 20px; background:white; border-bottom:1px solid #ddd;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 18px;
-}
+.logo { font-weight:bold; font-size:18px; }
 
 .upload-btn {
-  background: #111;
-  color: white;
-  padding: 8px 18px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
+background:#111; color:white; padding:8px 18px;
+border-radius:20px; border:none; cursor:pointer;
 }
 
-.advertise {
-  color: #aaa;
-  font-size: 12px;
-  margin: 10px 20px;
-}
+.advertise { color:#aaa; font-size:12px; margin:10px 20px; }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px; padding:20px;
 }
 
-.video-wrapper {
-  text-align: center;
-}
-
-.video-title {
-  margin-bottom: 8px;
-  font-weight: bold;
-}
+.video-wrapper { text-align:center; }
+.video-title { margin-bottom:8px; font-weight:bold; }
 
 .video-card {
-  width: 100%;
-  height: 500px;
-  border-radius: 20px;
-  overflow: hidden;
-  background: black;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  position: relative;
-  z-index: 1;
+width:100%; height:500px;
+border-radius:20px; overflow:hidden;
+background:black;
+position:relative;
 }
 
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+video { width:100%; height:100%; object-fit:cover; }
+
+.download-btn {
+margin-top:10px;
+background:#111; color:white;
+padding:8px 16px;
+border-radius:20px;
+border:none;
+cursor:pointer;
 }
 
-/* IKLAN VIDEO */
+.download-btn:hover { background:#333; }
+
+/* TAMBAHAN IKLAN VIDEO */
 .video-ad {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: rgba(0,0,0,0.8);
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  display: none;
-  z-index: 10;
-  cursor: pointer;
+position:absolute;
+bottom:20px;
+left:20px;
+right:20px;
+background:rgba(0,0,0,0.85);
+color:white;
+padding:15px;
+border-radius:10px;
+display:none;
+z-index:10;
+cursor:pointer;
 }
 
 .close-ad {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  cursor: pointer;
-  font-weight: bold;
+position:absolute;
+top:5px;
+right:10px;
+cursor:pointer;
+font-weight:bold;
 }
 
-.download-btn {
-  margin-top: 10px;
-  background: #111;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.download-btn:hover {
-  background: #333;
-}
-
-/* Floating */
+/* floating */
 .floating-social {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 9999;
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:9999;
 }
 
 .floating-social img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+width:50px;
+height:50px;
+border-radius:50%;
 }
 
-/* POPUP 18+ */
+/* age popup */
 .age-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
+position:fixed;
+top:0; left:0;
+width:100%; height:100%;
+background:rgba(0,0,0,0.7);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
 }
 
 .age-box {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  text-align: center;
-  max-width: 300px;
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+max-width:300px;
 }
 
 .age-btn {
-  margin: 10px;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+margin:10px;
+padding:8px 16px;
+border:none;
+border-radius:10px;
+cursor:pointer;
 }
 
-.yes-btn { background: green; color: white; }
-.no-btn { background: red; color: white; }
+.yes-btn { background:green; color:white; }
+.no-btn { background:red; color:white; }
 
 .ad-popup {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 300px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-  overflow: hidden;
-  z-index: 99999;
-  display: none;
+position:fixed;
+bottom:20px;
+left:20px;
+width:300px;
+background:white;
+border-radius:12px;
+display:none;
+z-index:99999;
 }
 </style>
 </head>
@@ -193,73 +158,127 @@ video {
 <body>
 
 <div class="navbar">
-  <div class="logo">vldey.co</div>
-  <button class="upload-btn">Upload</button>
+<div class="logo">vldey.co</div>
+<button class="upload-btn">Upload</button>
 </div>
 
 <div class="advertise">Advertise</div>
 
 <div class="container">
 
-  <!-- VIDEO 1 -->
-  <div class="video-wrapper">
-    <div class="video-title">Video 1</div>
-    <div class="video-card">
-      <video controls>
-        <source src="vidio15.mp4" type="video/mp4">
-      </video>
-      <div class="video-ad" onclick="openVideoAd()">
-        <span class="close-ad" onclick="closeVideoAd(event)">✖</span>
-        <p>Klik iklan ini 🔥</p>
-      </div>
-    </div>
-    <button class="download-btn" onclick="fakeDownload()">Download</button>
-  </div>
+<!-- VIDEO 1 -->
+<div class="video-wrapper">
+<div class="video-title">Video 1</div>
+<div class="video-card">
+<video controls>
+<source src="vidio15.mp4" type="video/mp4">
+</video>
 
-  <!-- VIDEO 2 -->
-  <div class="video-wrapper">
-    <div class="video-title">Video 2</div>
-    <div class="video-card">
-      <video controls>
-        <source src="vidio16.mp4" type="video/mp4">
-      </video>
-      <div class="video-ad" onclick="openVideoAd()">
-        <span class="close-ad" onclick="closeVideoAd(event)">✖</span>
-        <p>Klik iklan ini 🔥</p>
-      </div>
-    </div>
-    <button class="download-btn" onclick="fakeDownload()">Download</button>
-  </div>
+<!-- TAMBAHAN IKLAN -->
+<div class="video-ad" onclick="openVideoAd()">
+<span class="close-ad" onclick="closeVideoAd(event)">✖</span>
+<p>Klik iklan ini 🔥</p>
+</div>
 
+</div>
+<button class="download-btn" onclick="fakeDownload()">Download</button>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="video-wrapper">
+<div class="video-title">Video 2</div>
+<div class="video-card">
+<video controls>
+<source src="vidio16.mp4" type="video/mp4">
+</video>
+
+<div class="video-ad" onclick="openVideoAd()">
+<span class="close-ad" onclick="closeVideoAd(event)">✖</span>
+<p>Klik iklan ini 🔥</p>
+</div>
+
+</div>
+<button class="download-btn" onclick="fakeDownload()">Download</button>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="video-wrapper">
+<div class="video-title">Video 3</div>
+<div class="video-card">
+<video controls>
+<source src="vidio4.mp4" type="video/mp4">
+</video>
+
+<div class="video-ad" onclick="openVideoAd()">
+<span class="close-ad" onclick="closeVideoAd(event)">✖</span>
+<p>Klik iklan ini 🔥</p>
+</div>
+
+</div>
+<button class="download-btn" onclick="fakeDownload()">Download</button>
+</div>
+
+<!-- VIDEO 4 -->
+<div class="video-wrapper">
+<div class="video-title">Video 4</div>
+<div class="video-card">
+<video controls>
+<source src="vidio6.mp4" type="video/mp4">
+</video>
+
+<div class="video-ad" onclick="openVideoAd()">
+<span class="close-ad" onclick="closeVideoAd(event)">✖</span>
+<p>Klik iklan ini 🔥</p>
+</div>
+
+</div>
+<button class="download-btn" onclick="fakeDownload()">Download</button>
+</div>
+
+</div>
+
+<!-- FLOATING -->
+<div class="floating-social">
+<a href="https://t.me/+5_Xl2E1QYlM2Zjhl" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+</a>
+<a href="https://whatsapp.com/channel/0029Vb7OmarC1Fu2tW0iuO3g" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/220/220236.png">
+</a>
 </div>
 
 <script>
 function fakeDownload() {
-  window.open("https://www.profitablecpmratenetwork.com/e60uraaz?key=00a8daf307455fd2003c7555c0a41b6f","_blank");
+window.open("https://www.profitablecpmratenetwork.com/e60uraaz?key=00a8daf307455fd2003c7555c0a41b6f","_blank");
 }
+</script>
 
-/* IKLAN VIDEO 10 DETIK */
+<!-- SEMUA IKLAN LAMA KAMU TETAP DI SINI (TIDAK DIHAPUS) -->
+<script src="https://pl29165520.profitablecpmratenetwork.com/72/9b/d2/729bd2f647d9fd4a03ae11d0c915b629.js"></script>
+
+<!-- TAMBAHAN SCRIPT IKLAN VIDEO -->
+<script>
 const videoAdLink = "https://arkgleamfox.com/e60uraaz?key=00a8daf307455fd2003c7555c0a41b6f";
 
-function openVideoAd() {
-  window.open(videoAdLink, "_blank");
+function openVideoAd(){
+window.open(videoAdLink,"_blank");
 }
 
-function closeVideoAd(e) {
-  e.stopPropagation();
-  document.querySelectorAll(".video-ad").forEach(ad => ad.style.display="none");
+function closeVideoAd(e){
+e.stopPropagation();
+document.querySelectorAll(".video-ad").forEach(ad=>ad.style.display="none");
 }
 
-function startVideoAds() {
-  setInterval(() => {
-    document.querySelectorAll(".video-ad").forEach(ad => {
-      ad.style.display = "block";
-      setTimeout(() => ad.style.display="none", 5000);
-    });
-  }, 10000);
+function startVideoAds(){
+setInterval(()=>{
+document.querySelectorAll(".video-ad").forEach(ad=>{
+ad.style.display="block";
+setTimeout(()=>{ad.style.display="none";},5000);
+});
+},10000);
 }
 
-window.onload = startVideoAds;
+window.addEventListener("load", startVideoAds);
 </script>
 
 </body>
